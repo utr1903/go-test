@@ -1,0 +1,15 @@
+name: Test
+
+on:
+  repository_dispatch:
+    types: [test]
+
+jobs:
+  build_and_push_images:
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      - name: Prompt branch name
+        shell: bash
+        run: echo "HERE"
