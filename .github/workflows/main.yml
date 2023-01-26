@@ -5,7 +5,7 @@ on:
     types: [test]
 
 jobs:
-  build_and_push_images:
+  test:
     runs-on: ubuntu-latest
     
     steps:
@@ -13,3 +13,8 @@ jobs:
       - name: Prompt branch name
         shell: bash
         run: echo "HERE"
+
+
+      - name: Prompt branch name
+        shell: bash
+        run: echo "${{ github.event.client_payload.key }}"
